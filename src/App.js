@@ -1,7 +1,7 @@
 //import logo from './logo.svg';
 import './App.scss';
 import {Route, Routes } from 'react-router-dom'
-
+import {BrowserRouter} from 'react-router-dom'
 
 import Layout from './component/Layout'
 import Home from './component/Home'
@@ -10,9 +10,9 @@ import Contact from './component/Contact'
 function App() {
   return (
    <>
-   
+   <BrowserRouter basename="/react-portfolio">
    <Routes>
-   <Route path='/' element={<Layout/>}>
+   <Route path='/react-portfolio' element={<Layout/>}>
    <Route index element={<Home/>}/>
    
    <Route path='about' element={<About/>}/>
@@ -20,7 +20,7 @@ function App() {
    </Route>
    
    </Routes>
-   
+   </BrowserRouter>
    </>
   );
 }
